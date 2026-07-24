@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Dark Mode Tokens */
+.theme-dark {
+  background-color: #353233;
+  color: #ffffff;
+}
+
+.theme-dark .bg-surface {
+  background-color: #353233;
+}
+
+.theme-dark .bg-card {
+  background-color: #2b2829;
+  border-color: rgba(231, 212, 157, 0.2);
+}
+
+
+
+/* Light Mode Tokens */
+.theme-light {
+  background-color: #fcfbfa;
+  color: #1a1919;
+}
+
+.theme-light .bg-surface {
+  background-color: #fcfbfa;
+}
+
+.theme-light .bg-card {
+  background-color: #ffffff;
+  border-color: rgba(172, 146, 111, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light text-white {
+  color: #1a1919 !important;
+}
+
+/* Gold Accent Classes */
+.gold-text {
+  color: #e7d49d;
+}
+
+.theme-light .gold-text {
+  color: #8c734b;
+}
+
+.gold-btn {
+  background-color: #ac926f;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.gold-btn:hover {
+  background-color: #e7d49d;
+  color: #353233;
+}
+
+.dark-card {
+  transition: all 0.3s ease;
+}
+
+/* Form Inputs */
+input[type=date], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.theme-dark input, .theme-dark select, .theme-dark textarea {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #0a0a0a;
+  border: 1px solid rgba(231, 212, 157, 0.4);
+}
+
+.theme-light input, .theme-light select, .theme-light textarea {
+  background-color: #ffffff;
+  color: #1a1919;
+  border: 1px solid rgba(172, 146, 111, 0.35);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #353233;
+}
+::-webkit-scrollbar-thumb {
+  background: #ac926f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e7d49d;
+}
