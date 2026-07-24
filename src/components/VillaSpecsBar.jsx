@@ -10,18 +10,25 @@ export default function VillaSpecsBar({ theme }) {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 text-center">
           {VILLA_SPECS.map((spec, idx) => (
-            <div key={idx} className="space-y-1 p-3 border-r border-stone-500/10 last:border-r-0">
-              <span className="text-2xl sm:text-3xl font-serif-luxury font-bold text-[#ac926f] block">
+            <div 
+              key={idx} 
+              className={`space-y-1 p-3.5 sm:p-4 rounded-xl border transition-all ${
+                isDark 
+                  ? 'bg-[#353233]/60 border-white/10 hover:border-[#e7d49d]/40' 
+                  : 'bg-white/80 border-stone-200 shadow-sm hover:border-[#ac926f]/40'
+              }`}
+            >
+              <span className="text-xl sm:text-2xl lg:text-3xl font-serif-luxury font-bold text-[#ac926f] block">
                 {spec.val}
               </span>
-              <span className={`text-xs uppercase font-bold tracking-wider block ${
+              <span className={`text-[11px] sm:text-xs uppercase font-bold tracking-wider block ${
                 isDark ? 'text-white' : 'text-[#1a1919]'
               }`}>
                 {spec.label}
               </span>
-              <span className={`text-[10px] font-light block ${
+              <span className={`text-[10px] font-light block leading-tight ${
                 isDark ? 'text-stone-400' : 'text-stone-600'
               }`}>
                 {spec.desc}

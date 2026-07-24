@@ -34,14 +34,14 @@ export default function RoomsSection({ onOpenBooking, theme, currentLang }) {
         </div>
 
         {/* Space Navigation Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8 sm:mb-12">
+        <div className="flex overflow-x-auto no-scrollbar items-center justify-start sm:justify-center gap-2 sm:gap-3 mb-6 sm:mb-12 pb-2 sm:pb-0 -mx-4 px-4 sm:mx-0">
           {ROOMS.map((room, idx) => (
             <button
               key={room.id}
               onClick={() => setSelectedRoomIndex(idx)}
-              className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border ${
+              className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border whitespace-nowrap shrink-0 min-h-[42px] cursor-pointer ${
                 selectedRoomIndex === idx
-                  ? 'gold-btn shadow-lg border-transparent scale-105'
+                  ? 'gold-btn shadow-lg border-transparent scale-102'
                   : isDark 
                     ? 'bg-white/5 text-stone-300 hover:bg-white/15 border-white/10' 
                     : 'bg-white text-stone-700 hover:bg-stone-100 border-stone-300'
@@ -58,7 +58,7 @@ export default function RoomsSection({ onOpenBooking, theme, currentLang }) {
         }`}>
           
           {/* Photo Showcase Container */}
-          <div className="lg:col-span-7 rounded-xl overflow-hidden shadow-2xl border border-stone-500/20 group relative aspect-[16/10] sm:aspect-[4/3] w-full bg-black/40">
+          <div className="lg:col-span-7 rounded-xl overflow-hidden shadow-2xl border border-stone-500/20 group relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] w-full bg-black/40">
             <img
               src={activeRoom.imagem}
               alt={activeRoom.nome}
@@ -122,7 +122,7 @@ export default function RoomsSection({ onOpenBooking, theme, currentLang }) {
             <div className="pt-3">
               <button
                 onClick={() => onOpenBooking({ room: activeRoom.nome })}
-                className="w-full sm:w-auto gold-btn font-bold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl shadow-xl flex items-center justify-center gap-2.5 group hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
+                className="w-full sm:w-auto gold-btn font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow-xl flex items-center justify-center gap-2.5 group hover:scale-[1.02] active:scale-95 transition-all min-h-[46px] cursor-pointer"
               >
                 <Calendar className="w-4 h-4" />
                 <span>{currentLang === 'PT' ? 'Reservar Este Espaço' : 'Book This Space'}</span>

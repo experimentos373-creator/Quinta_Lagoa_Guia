@@ -9,6 +9,7 @@ import GallerySection from './components/GallerySection';
 import GoogleMapsSection from './components/GoogleMapsSection';
 import ContactFooter from './components/ContactFooter';
 import ReservationModal from './components/ReservationModal';
+import MobileFloatingBar from './components/MobileFloatingBar';
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -63,6 +64,9 @@ export default function App() {
 
       {/* 8. Contact & Footer */}
       <ContactFooter theme={theme} currentLang={currentLang} />
+
+      {/* Mobile Sticky Floating Action Bar (Visible < md) */}
+      <MobileFloatingBar onOpenBooking={() => handleOpenBooking()} currentLang={currentLang} />
 
       {/* Reservation Modal */}
       {bookingModalOpen && (

@@ -4,8 +4,8 @@ export const QUINTA_INFO = {
   subtitulo: "Um refúgio exclusivo de gastronomia, eventos e hospitalidade em Guia, Pombal.",
   descricaoLonga: "A Quinta Lagoa da Guia é um espaço onde a natureza mediterrânica, o design contemporâneo e a hospitalidade portuguesa se encontram. Rodeada por oliveiras centenárias, pinheiros-mansos e uma paisagem banhada pela luz suave de Leiria, a Quinta oferece um refúgio onde autenticidade e tranquilidade criam momentos inesquecíveis.",
   logoUrl: "https://quintalagoadaguia.pt/wp-content/uploads/2025/12/logo_quintalagoadaguia.jpg",
-  heroBgUrl: "https://quintalagoadaguia.pt/wp-content/uploads/2026/01/IMG-20260104-WA0018.jpg",
-  bannerBgUrl: "https://quintalagoadaguia.pt/wp-content/uploads/2025/12/cropped-quintalagoadaguia2-1.jpg",
+  heroBgUrl: "/images/quinta_hero_bg.png",
+  bannerBgUrl: "/images/quinta_hero_bg.png",
   localizacao: {
     morada: "Avenida Nossa Senhora da Guia 213",
     codigoPostal: "3105-089",

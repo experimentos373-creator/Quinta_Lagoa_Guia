@@ -35,25 +35,26 @@ export default function ReservationModal({ preselectedData, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="dark-card border border-[#e7d49d]/40 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative text-white shadow-2xl">
+    <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
+      <div className="dark-card border border-[#e7d49d]/40 rounded-2xl w-full max-w-2xl max-h-[92vh] overflow-y-auto p-5 sm:p-8 relative text-white shadow-2xl">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+          className="absolute top-3.5 right-3.5 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer"
+          aria-label="Fechar Modal"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Modal Header */}
-        <div className="text-center space-y-2 mb-6">
+        <div className="text-center space-y-2 mb-5 sm:mb-6 pr-6">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full gold-bg text-[#353233] text-[10px] uppercase font-bold tracking-widest">
             <Sparkles className="w-3 h-3" />
             <span>Direct Villa Booking</span>
           </div>
 
-          <h3 className="text-2xl sm:text-4xl font-serif-luxury font-bold text-white">
+          <h3 className="text-xl sm:text-3xl font-serif-luxury font-bold text-white">
             Reserva Direta na Quinta
           </h3>
           <p className="text-stone-300 text-xs font-light">
@@ -62,7 +63,7 @@ export default function ReservationModal({ preselectedData, onClose }) {
         </div>
 
         {!submittedCode ? (
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3.5">
             
             {/* Row 1: Dates & Guests */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -189,7 +190,7 @@ export default function ReservationModal({ preselectedData, onClose }) {
             {/* Submit */}
             <button
               type="submit"
-              className="w-full gold-btn font-bold text-xs uppercase tracking-widest py-3.5 rounded-md shadow-xl flex items-center justify-center gap-2"
+              className="w-full gold-btn font-bold text-xs uppercase tracking-widest py-4 rounded-xl shadow-xl flex items-center justify-center gap-2 active:scale-95 transition-all min-h-[48px] cursor-pointer"
             >
               <ShieldCheck className="w-4 h-4" />
               <span>Confirmar Pedido de Reserva</span>
