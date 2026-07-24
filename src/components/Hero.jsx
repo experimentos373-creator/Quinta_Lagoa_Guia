@@ -36,43 +36,40 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         )}
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-3.5 sm:space-y-6 lg:space-y-8 my-auto">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 sm:space-y-6 my-auto">
         
-        {/* Top Location Badge */}
-        <div className={`inline-flex items-center gap-1 px-2.5 py-0.5 sm:gap-2 sm:px-4 sm:py-1.5 rounded-full border text-[8.5px] sm:text-xs font-bold tracking-wider sm:tracking-widest uppercase shadow-sm transition-all ${
-          isDark 
-            ? 'bg-[#353233]/70 border-[#ac926f]/40 text-[#e7d49d] backdrop-blur-md' 
-            : 'bg-white/80 border-[#ac926f]/35 text-[#8c734b] backdrop-blur-sm'
-        }`}>
-          <Sparkles className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-[#ac926f]" />
+        {/* Top Location Divider Badge */}
+        <div className="inline-flex items-center justify-center gap-2.5 text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
+          <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
           <span>Guia • Pombal • Leiria</span>
+          <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
         </div>
 
-        {/* Main Headline - Larger & More Prestigious on Mobile */}
+        {/* Main Headline - Harmonious & Elegant Luxury Typography */}
         <div className="space-y-2 sm:space-y-3">
-          <h1 className={`text-[2.6rem] xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-bold tracking-tight leading-[1.08] ${
+          <h1 className={`text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif-luxury font-bold tracking-tight leading-tight ${
             isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919]'
           }`}>
             {currentLang === 'PT' ? 'Bem-vindo à' : 'Welcome to'} <br />
-            <span className="gold-text font-serif italic block mt-1 sm:mt-0">Quinta Lagoa da Guia</span>
+            <span className="gold-text font-serif italic block mt-1">Quinta Lagoa da Guia</span>
           </h1>
 
-          <p className={`text-base sm:text-2xl md:text-3xl font-semibold tracking-wide font-serif max-w-3xl mx-auto px-1 ${
-            isDark ? 'text-stone-200' : 'text-[#2b2829]'
+          <p className={`text-sm sm:text-xl md:text-2xl font-serif font-medium tracking-wide max-w-2xl mx-auto px-2 ${
+            isDark ? 'text-stone-200' : 'text-[#353233]'
           }`}>
             {currentLang === 'PT' ? 'O Seu Refúgio Exclusivo no Centro de Portugal' : 'Your Private Luxury Escape in Central Portugal'}
           </p>
         </div>
 
         {/* Description */}
-        <p className={`text-[11.5px] sm:text-base max-w-2xl mx-auto leading-relaxed px-2 ${
-          isDark ? 'text-stone-300 font-light' : 'text-[#353233] font-medium'
+        <p className={`text-xs sm:text-base max-w-2xl mx-auto leading-relaxed px-2 ${
+          isDark ? 'text-stone-300 font-light' : 'text-[#444041] font-medium'
         }`}>
           {QUINTA_INFO.descricaoLonga}
         </p>
 
         {/* Action Buttons */}
-        <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
+        <div className="pt-3 sm:pt-5 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
           <button
             onClick={() => onOpenBooking()}
             className="w-full sm:w-auto gold-btn font-bold text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 sm:py-4 rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
