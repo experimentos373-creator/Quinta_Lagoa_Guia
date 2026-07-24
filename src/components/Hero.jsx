@@ -38,15 +38,15 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 sm:space-y-6 w-full my-auto">
         
-        {/* Top Location Divider Badge */}
-        <div className="inline-flex items-center justify-center gap-2.5 text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
+        {/* Top Location Divider Badge - Moved 15px up on mobile */}
+        <div className="relative -top-[15px] sm:top-0 inline-flex items-center justify-center gap-2.5 text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
           <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
           <span>Guia • Pombal • Leiria</span>
           <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
         </div>
 
-        {/* Main Headline - Larger & Impressive on Mobile */}
-        <div className="space-y-2 sm:space-y-3">
+        {/* Main Headline - Moved 10px up on mobile */}
+        <div className="relative -top-[10px] sm:top-0 space-y-2 sm:space-y-3">
           <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif-luxury font-bold tracking-tight leading-tight ${
             isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919]'
           }`}>
