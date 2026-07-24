@@ -38,8 +38,8 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 lg:space-y-8 my-auto">
         
-        {/* Top Location Badge */}
-        <div className="flex justify-center">
+        {/* Top Location Badge - Moved 10px up on mobile */}
+        <div className="flex justify-center -mt-[10px] sm:mt-0">
           <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase shadow-md ${
             isDark 
               ? 'bg-[#353233]/80 border-[#ac926f]/50 text-[#e7d49d] backdrop-blur-md' 
