@@ -36,8 +36,20 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         )}
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-5 sm:space-y-6 lg:space-y-8 my-auto">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 lg:space-y-8 my-auto">
         
+        {/* Top Location Badge */}
+        <div className="flex justify-center">
+          <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase shadow-md ${
+            isDark 
+              ? 'bg-[#353233]/80 border-[#ac926f]/50 text-[#e7d49d] backdrop-blur-md' 
+              : 'bg-white/95 border-[#ac926f]/40 text-[#ac926f]'
+          }`}>
+            <Sparkles className="w-3.5 h-3.5 text-[#ac926f]" />
+            <span>Guia • Pombal • Leiria</span>
+          </div>
+        </div>
+
         {/* Main Headline - Increased Font Size */}
         <div className="space-y-3">
           <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-bold tracking-tight leading-[1.1] ${
@@ -52,18 +64,6 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
           }`}>
             {currentLang === 'PT' ? 'O Seu Refúgio Exclusivo no Centro de Portugal' : 'Your Private Luxury Escape in Central Portugal'}
           </p>
-        </div>
-
-        {/* Location Badge - Centered in the middle between Subtitle and Description */}
-        <div className="pt-1 pb-1 flex justify-center">
-          <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase shadow-md ${
-            isDark 
-              ? 'bg-[#353233]/80 border-[#ac926f]/50 text-[#e7d49d] backdrop-blur-md' 
-              : 'bg-white/95 border-[#ac926f]/40 text-[#ac926f]'
-          }`}>
-            <Sparkles className="w-3.5 h-3.5 text-[#ac926f]" />
-            <span>Guia • Pombal • Leiria</span>
-          </div>
         </div>
 
         {/* Description */}
