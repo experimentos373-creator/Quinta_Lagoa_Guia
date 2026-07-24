@@ -36,28 +36,28 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         )}
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 lg:space-y-8 my-auto">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-4 sm:space-y-6 lg:space-y-8 my-auto">
         
         {/* Top Location Badge */}
-        <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase shadow-md ${
+        <div className={`inline-flex items-center gap-1.5 px-3 py-1 sm:gap-2 sm:px-4 sm:py-1.5 rounded-full border text-[9.5px] sm:text-xs font-semibold tracking-wider sm:tracking-widest uppercase shadow-md ${
           isDark 
             ? 'bg-[#353233]/80 border-[#ac926f]/50 text-[#e7d49d] backdrop-blur-md' 
             : 'bg-white/95 border-[#ac926f]/40 text-[#ac926f]'
         }`}>
-          <Sparkles className="w-3.5 h-3.5 text-[#ac926f]" />
+          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#ac926f]" />
           <span>Guia • Pombal • Leiria</span>
         </div>
 
         {/* Main Headline - High Contrast & Sharp Legibility */}
-        <div className="space-y-3">
-          <h1 className={`text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-bold tracking-tight leading-[1.1] ${
+        <div className="space-y-2 sm:space-y-3">
+          <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-bold tracking-tight leading-[1.1] ${
             isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919]'
           }`}>
             {currentLang === 'PT' ? 'Bem-vindo à' : 'Welcome to'} <br />
             <span className="gold-text font-serif italic block mt-1 sm:mt-0">Quinta Lagoa da Guia</span>
           </h1>
 
-          <p className={`text-lg sm:text-2xl md:text-3xl font-semibold tracking-wide font-serif max-w-3xl mx-auto px-2 ${
+          <p className={`text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide font-serif max-w-3xl mx-auto px-2 ${
             isDark ? 'text-stone-200' : 'text-[#2b2829]'
           }`}>
             {currentLang === 'PT' ? 'O Seu Refúgio Exclusivo no Centro de Portugal' : 'Your Private Luxury Escape in Central Portugal'}
