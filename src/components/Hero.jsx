@@ -10,7 +10,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
     : (QUINTA_INFO.heroBgLightUrl || "https://quintalagoadaguia.pt/wp-content/uploads/2025/12/sala_oliveira.jpg");
 
   return (
-    <section id="hero" className={`relative min-h-[100dvh] md:min-h-[92vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 lg:py-32 transition-colors duration-500 ${
+    <section id="hero" className={`relative min-h-[100dvh] md:min-h-[92vh] flex items-start sm:items-center justify-center overflow-hidden pt-3 pb-12 sm:py-24 lg:py-32 transition-colors duration-500 ${
       isDark ? 'bg-[#353233] text-white' : 'bg-[#fcfbfa] text-[#1a1919]'
     }`}>
       
@@ -36,7 +36,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         )}
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 sm:space-y-6 my-auto">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3 sm:space-y-6 w-full mt-2 mb-auto sm:my-auto">
         
         {/* Top Location Divider Badge */}
         <div className="inline-flex items-center justify-center gap-2.5 text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
