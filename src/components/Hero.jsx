@@ -36,40 +36,40 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         )}
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3 sm:space-y-5 w-full my-auto">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 sm:space-y-6 w-full my-auto">
         
         {/* Top Location Divider Badge */}
-        <div className="inline-flex items-center justify-center gap-2.5 text-[10.5px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
+        <div className="inline-flex items-center justify-center gap-2.5 text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
           <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
           <span>Guia • Pombal • Leiria</span>
           <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
         </div>
 
-        {/* Main Headline - Harmonious & Elegant Luxury Typography */}
-        <div className="space-y-1.5 sm:space-y-3">
-          <h1 className={`text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif-luxury font-bold tracking-tight leading-tight ${
+        {/* Main Headline - Larger & Impressive on Mobile */}
+        <div className="space-y-2 sm:space-y-3">
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif-luxury font-bold tracking-tight leading-tight ${
             isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919]'
           }`}>
             {currentLang === 'PT' ? 'Bem-vindo à' : 'Welcome to'} <br />
-            <span className="gold-text font-serif italic block mt-0.5">Quinta Lagoa da Guia</span>
+            <span className="gold-text font-serif italic block mt-1">Quinta Lagoa da Guia</span>
           </h1>
 
-          <p className={`text-xs sm:text-xl md:text-2xl font-serif font-medium tracking-wide max-w-2xl mx-auto px-2 ${
-            isDark ? 'text-stone-200' : 'text-[#353233]'
+          <p className={`text-base sm:text-xl md:text-2xl font-serif font-semibold tracking-wide max-w-2xl mx-auto px-2 ${
+            isDark ? 'text-stone-200' : 'text-[#2b2829]'
           }`}>
             {currentLang === 'PT' ? 'O Seu Refúgio Exclusivo no Centro de Portugal' : 'Your Private Luxury Escape in Central Portugal'}
           </p>
         </div>
 
-        {/* Description */}
-        <p className={`text-[11.5px] sm:text-base max-w-2xl mx-auto leading-relaxed px-2 ${
-          isDark ? 'text-stone-300 font-light' : 'text-[#444041] font-medium'
+        {/* Description - Larger Font & Great Readability */}
+        <p className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2 ${
+          isDark ? 'text-stone-300 font-light' : 'text-[#353233] font-medium'
         }`}>
           {QUINTA_INFO.descricaoLonga}
         </p>
 
         {/* Action Buttons */}
-        <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
+        <div className="pt-3 sm:pt-5 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
           <button
             onClick={() => onOpenBooking()}
             className="w-full sm:w-auto gold-btn font-bold text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 sm:py-4 rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
@@ -88,19 +88,6 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
           >
             {currentLang === 'PT' ? 'Explorar a Quinta' : 'Explore Estate'}
           </a>
-        </div>
-
-        {/* Feature Highlights Pills */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
-          <span className={`px-2.5 py-1 rounded-full border ${isDark ? 'bg-white/5 border-white/15 text-stone-300' : 'bg-white/70 border-stone-300/60 text-stone-700 shadow-sm'}`}>
-            ✨ Gastronomia
-          </span>
-          <span className={`px-2.5 py-1 rounded-full border ${isDark ? 'bg-white/5 border-white/15 text-stone-300' : 'bg-white/70 border-stone-300/60 text-stone-700 shadow-sm'}`}>
-            🌿 Eventos & Casamentos
-          </span>
-          <span className={`px-2.5 py-1 rounded-full border ${isDark ? 'bg-white/5 border-white/15 text-stone-300' : 'bg-white/70 border-stone-300/60 text-stone-700 shadow-sm'}`}>
-            🏡 Alojamento de Charme
-          </span>
         </div>
 
       </div>
