@@ -10,7 +10,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
     : (QUINTA_INFO.heroBgLightUrl || "https://quintalagoadaguia.pt/wp-content/uploads/2025/12/sala_oliveira.jpg");
 
   return (
-    <section id="hero" className={`relative min-h-[100dvh] md:min-h-[92vh] flex items-start sm:items-center justify-center overflow-hidden pt-3 pb-12 sm:py-24 lg:py-32 transition-colors duration-500 ${
+    <section id="hero" className={`relative min-h-[100dvh] md:min-h-[92vh] flex flex-col justify-between items-center overflow-hidden pt-4 pb-6 sm:py-16 lg:py-24 transition-colors duration-500 ${
       isDark ? 'bg-[#353233] text-white' : 'bg-[#fcfbfa] text-[#1a1919]'
     }`}>
       
@@ -36,25 +36,25 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         )}
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3 sm:space-y-6 w-full mt-2 mb-auto sm:my-auto">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3 sm:space-y-5 w-full my-auto">
         
         {/* Top Location Divider Badge */}
-        <div className="inline-flex items-center justify-center gap-2.5 text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
+        <div className="inline-flex items-center justify-center gap-2.5 text-[10.5px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#a08256] dark:text-[#e7d49d]">
           <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
           <span>Guia • Pombal • Leiria</span>
           <span className="h-[1px] w-6 sm:w-10 bg-[#a08256]/50 dark:bg-[#e7d49d]/50"></span>
         </div>
 
         {/* Main Headline - Harmonious & Elegant Luxury Typography */}
-        <div className="space-y-2 sm:space-y-3">
+        <div className="space-y-1.5 sm:space-y-3">
           <h1 className={`text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif-luxury font-bold tracking-tight leading-tight ${
             isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919]'
           }`}>
             {currentLang === 'PT' ? 'Bem-vindo à' : 'Welcome to'} <br />
-            <span className="gold-text font-serif italic block mt-1">Quinta Lagoa da Guia</span>
+            <span className="gold-text font-serif italic block mt-0.5">Quinta Lagoa da Guia</span>
           </h1>
 
-          <p className={`text-sm sm:text-xl md:text-2xl font-serif font-medium tracking-wide max-w-2xl mx-auto px-2 ${
+          <p className={`text-xs sm:text-xl md:text-2xl font-serif font-medium tracking-wide max-w-2xl mx-auto px-2 ${
             isDark ? 'text-stone-200' : 'text-[#353233]'
           }`}>
             {currentLang === 'PT' ? 'O Seu Refúgio Exclusivo no Centro de Portugal' : 'Your Private Luxury Escape in Central Portugal'}
@@ -62,14 +62,14 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         </div>
 
         {/* Description */}
-        <p className={`text-xs sm:text-base max-w-2xl mx-auto leading-relaxed px-2 ${
+        <p className={`text-[11.5px] sm:text-base max-w-2xl mx-auto leading-relaxed px-2 ${
           isDark ? 'text-stone-300 font-light' : 'text-[#444041] font-medium'
         }`}>
           {QUINTA_INFO.descricaoLonga}
         </p>
 
         {/* Action Buttons */}
-        <div className="pt-3 sm:pt-5 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
+        <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
           <button
             onClick={() => onOpenBooking()}
             className="w-full sm:w-auto gold-btn font-bold text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 sm:py-4 rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
@@ -90,21 +90,36 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
           </a>
         </div>
 
-        {/* Scroll Down Indicator */}
-        <div className="pt-8 sm:pt-12 flex justify-center">
-          <a
-            href="#overview"
-            className={`p-3 rounded-full border transition-colors ${
-              isDark 
-                ? 'bg-white/10 hover:bg-[#ac926f]/30 text-white hover:text-[#e7d49d] border-white/20' 
-                : 'bg-white/95 hover:bg-white text-stone-800 hover:text-[#ac926f] border-stone-300 shadow-md'
-            }`}
-            title="Scroll Down"
-          >
-            <ChevronDown className="w-5 h-5 animate-bounce" />
-          </a>
+        {/* Feature Highlights Pills */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
+          <span className={`px-2.5 py-1 rounded-full border ${isDark ? 'bg-white/5 border-white/15 text-stone-300' : 'bg-white/70 border-stone-300/60 text-stone-700 shadow-sm'}`}>
+            ✨ Gastronomia
+          </span>
+          <span className={`px-2.5 py-1 rounded-full border ${isDark ? 'bg-white/5 border-white/15 text-stone-300' : 'bg-white/70 border-stone-300/60 text-stone-700 shadow-sm'}`}>
+            🌿 Eventos & Casamentos
+          </span>
+          <span className={`px-2.5 py-1 rounded-full border ${isDark ? 'bg-white/5 border-white/15 text-stone-300' : 'bg-white/70 border-stone-300/60 text-stone-700 shadow-sm'}`}>
+            🏡 Alojamento de Charme
+          </span>
         </div>
 
+      </div>
+
+      {/* Scroll Indicator at Bottom */}
+      <div className="relative z-10 pt-2 pb-1 flex flex-col items-center">
+        <a
+          href="#overview"
+          className="flex flex-col items-center gap-1 group text-xs uppercase tracking-widest font-semibold text-[#a08256] dark:text-[#e7d49d] hover:opacity-80 transition-opacity"
+        >
+          <span className="text-[9px] tracking-[0.2em] font-bold">{currentLang === 'PT' ? 'Explorar Quinta' : 'Discover Estate'}</span>
+          <div className={`p-1.5 rounded-full border transition-all ${
+            isDark 
+              ? 'bg-white/10 group-hover:bg-[#ac926f]/30 text-white group-hover:text-[#e7d49d] border-white/20' 
+              : 'bg-white/95 group-hover:bg-white text-stone-800 group-hover:text-[#ac926f] border-stone-300 shadow-md'
+          }`}>
+            <ChevronDown className="w-4 h-4 animate-bounce" />
+          </div>
+        </a>
       </div>
 
     </section>
