@@ -6,7 +6,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
   const isDark = theme === 'dark';
 
   return (
-    <section id="hero" className={`relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 lg:py-32 transition-colors duration-500 ${
+    <section id="hero" className={`relative min-h-[100dvh] md:min-h-[92vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 lg:py-32 transition-colors duration-500 ${
       isDark ? 'bg-[#353233] text-white' : 'bg-[#fcfbfa] text-[#1a1919]'
     }`}>
       
@@ -45,14 +45,14 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
 
         {/* Main Headline */}
         <div className="space-y-3">
-          <h1 className={`text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-normal tracking-tight leading-[1.1] ${
+          <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-normal tracking-tight leading-[1.1] ${
             isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919]'
           }`}>
             {currentLang === 'PT' ? 'Bem-vindo à' : 'Welcome to'} <br />
             <span className="gold-text font-serif italic">Quinta Lagoa da Guia</span>
           </h1>
 
-          <p className={`text-lg sm:text-2xl md:text-3xl font-light tracking-wide font-serif max-w-3xl mx-auto ${
+          <p className={`text-xl sm:text-2xl md:text-3xl font-light tracking-wide font-serif max-w-3xl mx-auto ${
             isDark ? 'text-stone-200' : 'text-stone-700'
           }`}>
             {currentLang === 'PT' ? 'O Seu Refúgio Exclusivo no Centro de Portugal' : 'Your Private Luxury Escape in Central Portugal'}

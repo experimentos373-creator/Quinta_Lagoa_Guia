@@ -40,23 +40,23 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
       {/* ALWAYS DARK PRESTIGE NAVBAR */}
       <div className={`w-full transition-all duration-300 border-b border-white/10 text-white ${
         scrolled 
-          ? 'bg-[#353233]/95 backdrop-blur-md shadow-2xl py-3' 
-          : 'bg-[#353233] py-4 shadow-lg'
+          ? 'bg-[#353233]/95 backdrop-blur-md shadow-2xl py-2.5 sm:py-3' 
+          : 'bg-[#353233] py-3.5 sm:py-4 shadow-lg'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
           {/* Brand Logo - Anchored Firmly on Left */}
-          <a href="#hero" className="flex items-center gap-3 shrink-0 mr-4 lg:mr-8 group">
+          <a href="#hero" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group min-w-0">
             <img
               src={QUINTA_INFO.logoUrl}
               alt="Quinta Lagoa da Guia Logo"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border border-[#ac926f]/40 shadow-md group-hover:border-[#e7d49d] transition-all"
+              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-cover border border-[#ac926f]/40 shadow-md group-hover:border-[#e7d49d] transition-all shrink-0"
             />
-            <div className="flex flex-col">
-              <span className="whitespace-nowrap font-serif-luxury text-base sm:text-lg font-bold tracking-wider text-white uppercase group-hover:text-[#e7d49d] transition-colors">
+            <div className="flex flex-col min-w-0">
+              <span className="truncate font-serif-luxury text-sm sm:text-base lg:text-lg font-bold tracking-wider text-white uppercase group-hover:text-[#e7d49d] transition-colors">
                 Quinta Lagoa da Guia
               </span>
-              <span className="whitespace-nowrap text-[9px] sm:text-[9.5px] uppercase tracking-widest text-[#e7d49d] font-bold -mt-0.5">
+              <span className="truncate text-[8.5px] sm:text-[9.5px] uppercase tracking-widest text-[#e7d49d] font-bold -mt-0.5">
                 Gastronomia • Eventos • Guia
               </span>
             </div>
@@ -136,25 +136,19 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
 
           </div>
 
-          {/* Mobile & Tablet Actions (lg:hidden) */}
-          <div className="flex lg:hidden items-center gap-2 sm:gap-3">
+          {/* Mobile & Tablet Actions (lg:hidden) - Clean & Zero Cutoffs */}
+          <div className="flex lg:hidden items-center gap-2 shrink-0">
             <button
               onClick={() => setTheme(isDark ? 'light' : 'dark')}
-              className="p-2 rounded-lg border border-white/15 bg-[#2b2829] text-[#e7d49d] hover:bg-white/10 transition-all"
+              className="p-2 rounded-lg border border-white/15 bg-[#2b2829] text-[#e7d49d] hover:bg-white/10 transition-all cursor-pointer"
+              title={isDark ? "Mudar para Modo Claro" : "Mudar para Modo Escuro"}
             >
               {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4 text-[#e7d49d]" />}
             </button>
 
             <button
-              onClick={() => onOpenBooking()}
-              className="gold-btn font-bold text-[10px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2 rounded-lg shadow-sm whitespace-nowrap"
-            >
-              {currentLang === 'PT' ? 'Reservar' : 'Book'}
-            </button>
-
-            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg focus:outline-none border border-white/15 bg-[#2b2829] text-white hover:bg-white/10"
+              className="p-2 rounded-lg focus:outline-none border border-white/15 bg-[#2b2829] text-white hover:bg-white/10 cursor-pointer"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -163,7 +157,7 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
         </div>
       </div>
 
-      {/* Mobile & Tablet Drawer Panel (Always Dark) */}
+      {/* Mobile & Tablet Drawer Panel */}
       {mobileMenuOpen && (
         <div className="2xl:hidden border-b border-[#e7d49d]/20 bg-[#2b2829] text-white px-6 pt-5 pb-8 space-y-4 shadow-2xl animate-in slide-in-from-top-2 duration-300">
           <div className="grid grid-cols-1 gap-1 border-b border-white/10 pb-4">
