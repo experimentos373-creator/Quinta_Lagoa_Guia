@@ -5,17 +5,19 @@ import { QUINTA_INFO } from '../data/quintaData';
 export default function Hero({ onOpenBooking, theme, currentLang }) {
   const isDark = theme === 'dark';
 
+  const currentHeroBg = isDark ? QUINTA_INFO.heroBgUrl : (QUINTA_INFO.heroBgLightUrl || QUINTA_INFO.bannerBgUrl);
+
   return (
     <section id="hero" className={`relative min-h-[100dvh] md:min-h-[92vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 lg:py-32 transition-colors duration-500 ${
       isDark ? 'bg-[#353233] text-white' : 'bg-[#fcfbfa] text-[#1a1919]'
     }`}>
       
-      {/* Hero Background Image - Local high quality asset */}
+      {/* Dynamic Theme Hero Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
-        style={{ backgroundImage: `url('${QUINTA_INFO.heroBgUrl}')` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 scale-105"
+        style={{ backgroundImage: `url('${currentHeroBg}')` }}
       >
-        {/* Dynamic Theme Overlay - Crisp background image visibility in both light & dark modes */}
+        {/* Dynamic Theme Overlay: Dark Slate in Dark Mode vs Soft Luminous Vignette in Light Mode */}
         {isDark ? (
           <>
             <div className="absolute inset-0 bg-[#353233]/70"></div>
@@ -24,10 +26,10 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
           </>
         ) : (
           <>
-            {/* Light Mode: Transparent light layer so the background photo is 100% CLEAR and VISIBLE */}
-            <div className="absolute inset-0 bg-[#fcfbfa]/25"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#fcfbfa] via-transparent to-[#fcfbfa]/40"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#fcfbfa]/40 via-transparent to-[#fcfbfa]/40"></div>
+            {/* Light Mode: Soft ivory vignette that blends seamlessly with bright daytime Quinta photo */}
+            <div className="absolute inset-0 bg-[#fcfbfa]/35"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#fcfbfa] via-transparent to-[#fcfbfa]/50"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#fcfbfa]/50 via-transparent to-[#fcfbfa]/50"></div>
           </>
         )}
       </div>
