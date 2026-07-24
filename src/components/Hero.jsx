@@ -5,7 +5,9 @@ import { QUINTA_INFO } from '../data/quintaData';
 export default function Hero({ onOpenBooking, theme, currentLang }) {
   const isDark = theme === 'dark';
 
-  const currentHeroBg = isDark ? QUINTA_INFO.heroBgUrl : (QUINTA_INFO.heroBgLightUrl || QUINTA_INFO.bannerBgUrl);
+  const currentHeroBg = isDark 
+    ? QUINTA_INFO.heroBgUrl 
+    : (QUINTA_INFO.heroBgLightUrl || "https://quintalagoadaguia.pt/wp-content/uploads/2025/12/sala_oliveira.jpg");
 
   return (
     <section id="hero" className={`relative min-h-[100dvh] md:min-h-[92vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 lg:py-32 transition-colors duration-500 ${
@@ -17,7 +19,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 scale-105"
         style={{ backgroundImage: `url('${currentHeroBg}')` }}
       >
-        {/* Dynamic Theme Overlay: Dark Slate in Dark Mode vs Soft Luminous Vignette in Light Mode */}
+        {/* Dynamic Theme Overlay: Dark Slate in Dark Mode vs Luminous Ivory Vignette in Light Mode */}
         {isDark ? (
           <>
             <div className="absolute inset-0 bg-[#353233]/70"></div>
@@ -26,10 +28,10 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
           </>
         ) : (
           <>
-            {/* Light Mode: Soft ivory vignette that blends seamlessly with bright daytime Quinta photo */}
-            <div className="absolute inset-0 bg-[#fcfbfa]/35"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#fcfbfa] via-transparent to-[#fcfbfa]/50"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#fcfbfa]/50 via-transparent to-[#fcfbfa]/50"></div>
+            {/* Light Mode Overlay: Balanced ivory backdrop so background photo shows tastefully while text remains 100% crisp & readable */}
+            <div className="absolute inset-0 bg-[#fcfbfa]/65 backdrop-blur-[1px]"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#fcfbfa] via-[#fcfbfa]/40 to-[#fcfbfa]/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#fcfbfa]/75 via-transparent to-[#fcfbfa]/75"></div>
           </>
         )}
       </div>
@@ -37,26 +39,26 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 lg:space-y-8 my-auto">
         
         {/* Top Location Badge */}
-        <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase backdrop-blur-md shadow-md ${
+        <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase shadow-md ${
           isDark 
-            ? 'bg-[#353233]/80 border-[#ac926f]/50 text-[#e7d49d]' 
-            : 'bg-white/85 border-[#ac926f]/40 text-[#ac926f]'
+            ? 'bg-[#353233]/80 border-[#ac926f]/50 text-[#e7d49d] backdrop-blur-md' 
+            : 'bg-white/95 border-[#ac926f]/40 text-[#ac926f]'
         }`}>
           <Sparkles className="w-3.5 h-3.5 text-[#ac926f]" />
           <span>Guia • Pombal • Leiria</span>
         </div>
 
-        {/* Main Headline */}
+        {/* Main Headline - High Contrast & Sharp Legibility */}
         <div className="space-y-3">
-          <h1 className={`text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-normal tracking-tight leading-[1.1] ${
-            isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919] drop-shadow-sm'
+          <h1 className={`text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury font-bold tracking-tight leading-[1.1] ${
+            isDark ? 'text-white drop-shadow-md' : 'text-[#1a1919]'
           }`}>
             {currentLang === 'PT' ? 'Bem-vindo à' : 'Welcome to'} <br />
             <span className="gold-text font-serif italic block mt-1 sm:mt-0">Quinta Lagoa da Guia</span>
           </h1>
 
-          <p className={`text-lg sm:text-2xl md:text-3xl font-light tracking-wide font-serif max-w-3xl mx-auto px-2 ${
-            isDark ? 'text-stone-200' : 'text-stone-800 font-medium'
+          <p className={`text-lg sm:text-2xl md:text-3xl font-semibold tracking-wide font-serif max-w-3xl mx-auto px-2 ${
+            isDark ? 'text-stone-200' : 'text-[#2b2829]'
           }`}>
             {currentLang === 'PT' ? 'O Seu Refúgio Exclusivo no Centro de Portugal' : 'Your Private Luxury Escape in Central Portugal'}
           </p>
@@ -64,7 +66,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
 
         {/* Description */}
         <p className={`text-xs sm:text-base max-w-2xl mx-auto leading-relaxed px-2 ${
-          isDark ? 'text-stone-300 font-light' : 'text-stone-800 font-medium'
+          isDark ? 'text-stone-300 font-light' : 'text-[#353233] font-medium'
         }`}>
           {QUINTA_INFO.descricaoLonga}
         </p>
@@ -81,10 +83,10 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
 
           <a
             href="#overview"
-            className={`w-full sm:w-auto border font-semibold text-xs sm:text-sm uppercase tracking-widest px-8 py-4 rounded-xl transition-all text-center backdrop-blur-sm ${
+            className={`w-full sm:w-auto border font-bold text-xs sm:text-sm uppercase tracking-widest px-8 py-4 rounded-xl transition-all text-center ${
               isDark 
-                ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' 
-                : 'bg-white/90 hover:bg-white text-stone-800 border-stone-300 shadow-md hover:border-[#ac926f]'
+                ? 'bg-white/10 hover:bg-white/20 text-white border-white/30 backdrop-blur-sm' 
+                : 'bg-white/95 hover:bg-white text-[#1a1919] border-stone-300 shadow-md hover:border-[#ac926f]'
             }`}
           >
             {currentLang === 'PT' ? 'Explorar a Quinta' : 'Explore Estate'}
@@ -98,7 +100,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
             className={`p-3 rounded-full border transition-colors ${
               isDark 
                 ? 'bg-white/10 hover:bg-[#ac926f]/30 text-white hover:text-[#e7d49d] border-white/20' 
-                : 'bg-white/90 hover:bg-white text-stone-700 hover:text-[#ac926f] border-stone-300 shadow-md'
+                : 'bg-white/95 hover:bg-white text-stone-800 hover:text-[#ac926f] border-stone-300 shadow-md'
             }`}
             title="Scroll Down"
           >
