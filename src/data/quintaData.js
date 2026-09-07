@@ -97,6 +97,15 @@ export const QUINTA_INFO = {
         comentario: "Excelente comida. Serviço atencioso e eficaz. Jantar extremamente tranquilo numa mesa perto da lareira. Decoração e ambiente excelente. Atendimento excelente, recomendo. Fiquei cliente!",
         destaque: "Jantar tranquilo junto à lareira • Fiquei cliente",
         avatarBg: "bg-rose-900"
+      },
+      {
+        id: "rev-6",
+        nome: "Inês Guarda",
+        rating: 5,
+        tempo: "há 7 meses",
+        comentario: "Espaço bem decorado com boa comida e atendimento. Muito bom!",
+        destaque: "Espaço bem decorado • Boa comida e atendimento",
+        avatarBg: "bg-[#7c6a53]"
       }
     ],
     googleMapsUrl: "https://www.google.com/maps/place//data=!4m2!3m1!1s0xd226b0016e8528f:0x78c307bcb37b4b00"

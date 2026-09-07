@@ -180,8 +180,6 @@ export default function GoogleReviewsSection({ onOpenBooking, theme, currentLang
             <div
               key={rev.id}
               className={`rounded-2xl p-6 border flex flex-col justify-between space-y-4 shadow-lg transition-all duration-300 hover:-translate-y-1 ${
-                index === 4 ? 'md:col-span-2 lg:col-span-2' : ''
-              } ${
                 isDark 
                   ? 'bg-[#353233] border-white/10 hover:border-[#ac926f]/60 text-white' 
                   : 'bg-white border-stone-200 hover:border-[#ac926f]/60 text-[#1a1919]'
