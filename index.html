@@ -4,13 +4,61 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e7d49d'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quinta Lagoa da Guia – Your Private Luxury Escape in Central Portugal</title>
-    <meta name="description" content="Quinta Lagoa da Guia é o seu refúgio privado de luxo no centro de Portugal. Suítes exclusivas, piscina aquecida, jacuzzi, gastronomia fina e eventos inesquecíveis em Pombal, Leiria." />
+    <title>Quinta Lagoa da Guia | Restaurante & Refúgio Exclusivo em Guia, Pombal</title>
+    <meta name="description" content="Quinta Lagoa da Guia: Cozinha tradicional portuguesa revisitada, sala de jantar privada e jantares acolhedores junto à lareira. Classificação 4.4★ no Google. Aberto todos os dias 12:00–22:00 em Pombal, Leiria." />
     
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Quinta Lagoa da Guia | Restaurante & Refúgio de Charme" />
+    <meta property="og:description" content="Cozinha tradicional portuguesa revisitada, sala privada e lareira. 4.4★ no Google (44 opiniões). Guia, Pombal." />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:locale" content="pt_PT" />
+
     <!-- Google Fonts: Playfair Display for Luxury Serifs & Inter for UI -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Restaurant Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Quinta Lagoa da Guia",
+        "image": "https://quintalagoadaguia.pt/wp-content/uploads/2026/01/IMG-20260104-WA0018.jpg",
+        "telephone": "+351961711042",
+        "servesCuisine": "Traditional Portuguese Cuisine",
+        "priceRange": "15€ - 35€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Nossa Sra. da Guia 204",
+          "postalCode": "3105-089",
+          "addressLocality": "Guia",
+          "addressRegion": "Leiria",
+          "addressCountry": "PT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.9482,
+          "longitude": -8.8258
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+            ],
+            "opens": "12:00",
+            "closes": "22:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "reviewCount": "44",
+          "bestRating": "5"
+        }
+      }
+    </script>
   </head>
   <body class="bg-[#353233] text-white font-sans antialiased selection:bg-[#e7d49d] selection:text-[#353233]">
     <div id="root"></div>

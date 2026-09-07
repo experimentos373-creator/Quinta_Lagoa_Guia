@@ -8,7 +8,7 @@ export const QUINTA_INFO = {
   heroBgLightUrl: "https://quintalagoadaguia.pt/wp-content/uploads/2025/12/sala_oliveira.jpg",
   bannerBgUrl: "https://quintalagoadaguia.pt/wp-content/uploads/2025/12/cropped-quintalagoadaguia2-1.jpg",
   localizacao: {
-    morada: "Avenida Nossa Senhora da Guia 213",
+    morada: "R. Nossa Sra. da Guia 204",
     codigoPostal: "3105-089",
     freguesia: "Guia",
     concelho: "Pombal",
@@ -24,6 +24,82 @@ export const QUINTA_INFO = {
     instagramUrl: "https://instagram.com/quintalagoadaguia.pt",
     facebook: "Quinta Lagoa da Guia",
     facebookUrl: "https://facebook.com/QuintaLagoaDaGuia"
+  },
+  google: {
+    rating: 4.4,
+    totalReviews: 44,
+    precoMedio: "15 - 35 €",
+    categoria: "Restaurante • Cozinha Tradicional Portuguesa Revisitada",
+    tempoPermanencia: "1 – 3,5 horas",
+    horario: {
+      dias: "Segunda a Domingo",
+      abertura: "12:00",
+      fecho: "22:00",
+      texto: "Aberto todos os dias das 12:00 às 22:00",
+      diasSemana: [
+        { dia: "Segunda-feira", horario: "12:00 – 22:00" },
+        { dia: "Terça-feira", horario: "12:00 – 22:00" },
+        { dia: "Quarta-feira", horario: "12:00 – 22:00" },
+        { dia: "Quinta-feira", horario: "12:00 – 22:00" },
+        { dia: "Sexta-feira", horario: "12:00 – 22:00" },
+        { dia: "Sábado", horario: "12:00 – 22:00" },
+        { dia: "Domingo", horario: "12:00 – 22:00" }
+      ]
+    },
+    destaquesServico: [
+      { id: "privada", titulo: "Sala de Jantar Privada", descricao: "Ambiente íntimo e reservado para momentos especiais e reuniões familiares ou de negócios." },
+      { id: "lareira", titulo: "Mesa Junto à Lareira", descricao: "Jantar acolhedor e tranquilo perto da lareira com decoração cuidada e atmosfera singular." },
+      { id: "tradicional", titulo: "Cozinha Tradicional Revisitada", descricao: "Culinária portuguesa autêntica com toque contemporâneo conduzida com mestria." },
+      { id: "servico", titulo: "Atendimento de Excelência", descricao: "Equipa dedicada, serviço de mesa atencioso e simpatia inigualável." }
+    ],
+    reviews: [
+      {
+        id: "rev-1",
+        nome: "Joana Lopes",
+        rating: 5,
+        tempo: "há 7 meses",
+        comentario: "Uma agradável surpresa! Adorei toda a experiência neste restaurante, do início ao fim 🤌🏻",
+        destaque: "Experiência gastronómica 5 estrelas do início ao fim",
+        avatarBg: "bg-amber-800"
+      },
+      {
+        id: "rev-2",
+        nome: "Dominique Lage",
+        rating: 5,
+        tempo: "há 6 meses",
+        comentario: "Desde a comida ao atendimento tudo muito bom e agradável. Irei voltar, recomendo vivamente!",
+        destaque: "Comida soberba e atendimento acolhedor",
+        avatarBg: "bg-stone-700"
+      },
+      {
+        id: "rev-3",
+        nome: "Therese Melanie",
+        rating: 5,
+        tempo: "há 6 meses",
+        comentario: "Desde a simpatia do Staff ao serviço de mesa extraordinário e todo o ambiente que envolve a Quinta, tudo 10 estrelas.",
+        destaque: "Serviço de mesa extraordinário e ambiente 10 estrelas",
+        avatarBg: "bg-[#ac926f]"
+      },
+      {
+        id: "rev-4",
+        nome: "Ster Dex",
+        rating: 5,
+        tempo: "há 7 meses",
+        comentario: "Un restaurant de cuisine traditionnelle portugaise revisité, tenu par un gérant expérimenté. L’accueil y est toujours parfait, on est toujours bien reçu.",
+        destaque: "Cozinha tradicional portuguesa com gerência experiente",
+        avatarBg: "bg-emerald-800"
+      },
+      {
+        id: "rev-5",
+        nome: "Leandra Pereira",
+        rating: 5,
+        tempo: "há 2 meses",
+        comentario: "Excelente comida. Serviço atencioso e eficaz. Jantar extremamente tranquilo numa mesa perto da lareira. Decoração e ambiente excelente. Atendimento excelente, recomendo. Fiquei cliente!",
+        destaque: "Jantar tranquilo junto à lareira • Fiquei cliente",
+        avatarBg: "bg-rose-900"
+      }
+    ],
+    googleMapsUrl: "https://www.google.com/maps/place//data=!4m2!3m1!1s0xd226b0016e8528f:0x78c307bcb37b4b00"
   }
 };
 

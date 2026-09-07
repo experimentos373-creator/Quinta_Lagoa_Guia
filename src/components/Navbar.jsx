@@ -33,6 +33,7 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
     { label: "A Quinta", href: "#overview" },
     { label: "Espaços", href: "#comodidades" },
     { label: "Restaurante", href: "#quartos" },
+    { label: "Avaliações", href: "#avaliacoes" },
     { label: "Galeria", href: "#galeria" },
     { label: "Localização", href: "#localizacao" },
     { label: "Contactos", href: "#contactos" }
@@ -41,6 +42,7 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
     { label: "The Estate", href: "#overview" },
     { label: "Spaces", href: "#comodidades" },
     { label: "Dining", href: "#quartos" },
+    { label: "Reviews", href: "#avaliacoes" },
     { label: "Gallery", href: "#galeria" },
     { label: "Location", href: "#localizacao" },
     { label: "Contacts", href: "#contactos" }
@@ -73,13 +75,13 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
             </div>
           </a>
 
-          {/* Nav Links - Centered, Only rendered on wide displays (>= 1536px) to prevent overlap */}
-          <nav className="hidden 2xl:flex items-center justify-center gap-5 3xl:gap-7 shrink min-w-0 px-4">
+          {/* Nav Links - Optimized spacing to prevent any overlap */}
+          <nav className="hidden xl:flex items-center justify-center gap-3 2xl:gap-4 shrink min-w-0 px-2">
             {navLinks.map((link, idx) => (
               <a
                 key={idx}
                 href={link.href}
-                className="whitespace-nowrap text-xs uppercase tracking-wider font-bold text-white/90 hover:text-[#e7d49d] transition-colors relative py-1 group"
+                className="whitespace-nowrap text-[11px] 2xl:text-xs uppercase tracking-wider font-semibold text-white/90 hover:text-[#e7d49d] transition-colors relative py-1 group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e7d49d] transition-all duration-300 group-hover:w-full"></span>

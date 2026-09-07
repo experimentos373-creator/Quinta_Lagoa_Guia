@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { QUINTA_INFO } from '../data/quintaData';
-import { Phone, Mail, MapPin, Instagram, Facebook, Send, CheckCircle2, FileText } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, Share2, Send, CheckCircle2, FileText, Clock } from 'lucide-react';
 
 export default function ContactFooter({ theme, currentLang }) {
   const [formData, setFormData] = useState({
@@ -71,6 +71,25 @@ export default function ContactFooter({ theme, currentLang }) {
                 <Mail className="w-4 h-4 text-[#ac926f] shrink-0" />
                 <span className={isDark ? 'text-stone-300' : 'text-stone-700'}>{QUINTA_INFO.contactos.email}</span>
               </a>
+
+              <div className="flex items-center gap-3">
+                <Clock className="w-4 h-4 text-[#ac926f] shrink-0" />
+                <span className={isDark ? 'text-stone-300' : 'text-stone-700'}>
+                  Segunda a Domingo: 12:00 – 22:00 (Aberto todos os dias)
+                </span>
+              </div>
+
+              <div className="pt-2">
+                <a
+                  href={QUINTA_INFO.google.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ac926f]/15 border border-[#ac926f]/30 text-[11px] text-[#ac926f] font-semibold hover:bg-[#ac926f]/25 transition-all"
+                >
+                  <span>★ 4.4 no Google ({QUINTA_INFO.google.totalReviews} avaliações)</span>
+                  <span className="text-stone-400">• {QUINTA_INFO.google.precoMedio}</span>
+                </a>
+              </div>
             </div>
 
             {/* Social Links */}
@@ -84,7 +103,7 @@ export default function ContactFooter({ theme, currentLang }) {
                 }`}
                 title="Instagram Quinta Lagoa da Guia"
               >
-                <Instagram className="w-4.5 h-4.5" />
+                <Globe className="w-4.5 h-4.5" />
               </a>
               <a
                 href={QUINTA_INFO.contactos.facebookUrl}
@@ -95,7 +114,7 @@ export default function ContactFooter({ theme, currentLang }) {
                 }`}
                 title="Facebook Quinta Lagoa da Guia"
               >
-                <Facebook className="w-4.5 h-4.5" />
+                <Share2 className="w-4.5 h-4.5" />
               </a>
             </div>
           </div>

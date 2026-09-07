@@ -39,9 +39,14 @@ export default function GoogleMapsSection({ theme }) {
           }`}>
             <div className="space-y-6">
               <div>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-[#ac926f] block mb-1">
-                  Endereço Oficial
-                </span>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#ac926f] block">
+                    Endereço Oficial Google
+                  </span>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#e7d49d]/20 text-[#e7d49d] font-bold">
+                    ★ 4.4 (44 reviews)
+                  </span>
+                </div>
                 <h3 className="font-serif-luxury text-lg sm:text-xl font-bold">
                   {QUINTA_INFO.nome}
                 </h3>
@@ -50,6 +55,9 @@ export default function GoogleMapsSection({ theme }) {
                   {QUINTA_INFO.localizacao.codigoPostal} {QUINTA_INFO.localizacao.freguesia}<br />
                   {QUINTA_INFO.localizacao.concelho} • {QUINTA_INFO.localizacao.distrito}, Portugal
                 </p>
+                <div className="mt-2 text-[11px] font-medium text-[#ac926f]">
+                  Restaurante • Preço médio: {QUINTA_INFO.google.precoMedio}
+                </div>
               </div>
 
               <div className="space-y-3 pt-4 border-t border-stone-500/20 text-xs">
@@ -71,14 +79,19 @@ export default function GoogleMapsSection({ theme }) {
 
                 <div className="flex items-center gap-3">
                   <Clock className="w-4 h-4 text-[#ac926f] shrink-0" />
-                  <span>Atendimento: 09:00 – 22:00</span>
+                  <div>
+                    <span className="font-medium block">Segunda a Domingo: 12:00 – 22:00</span>
+                    <span className={`text-[10px] block ${isDark ? 'text-stone-400' : 'text-stone-500'}`}>
+                      Almoço & Jantar • Aberto todos os dias
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="pt-4">
               <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${QUINTA_INFO.localizacao.coordenadas.lat},${QUINTA_INFO.localizacao.coordenadas.lng}`}
+                href="https://www.google.com/maps/dir/?api=1&destination=Quinta+Lagoa+da+Guia,+R.+Nossa+Sra.+da+Guia+204,+3105-089+Guia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full gold-btn font-bold text-xs uppercase tracking-widest py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 active:scale-95 transition-all min-h-[46px]"
@@ -94,8 +107,8 @@ export default function GoogleMapsSection({ theme }) {
           <div className="lg:col-span-8 rounded-2xl overflow-hidden shadow-2xl border border-[#ac926f]/30 min-h-[300px] sm:min-h-[400px]">
             <iframe
               loading="lazy"
-              src="https://maps.google.com/maps?q=Avenida%20Nossa%20Senhora%20da%20Guia%20213%2C%20Guia%2C%20Pombal%2C%20Portugal&t=m&z=14&output=embed&iwloc=near"
-              title="Quinta Lagoa da Guia, Avenida Nossa Senhora da Guia 213, Guia, Pombal, Portugal"
+              src="https://maps.google.com/maps?q=Quinta%20Lagoa%20da%20Guia%2C%20R.%20Nossa%20Sra.%20da%20Guia%20204%2C%203105-089%20Guia%2C%20Pombal%2C%20Portugal&t=m&z=15&output=embed&iwloc=near"
+              title="Quinta Lagoa da Guia, R. Nossa Sra. da Guia 204, Guia, Pombal, Portugal"
               className="w-full h-full min-h-[300px] sm:min-h-[400px] border-0"
               allowFullScreen=""
             ></iframe>

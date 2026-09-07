@@ -5,6 +5,7 @@ import VillaOverviewSection from './components/VillaOverviewSection';
 import VillaSpecsBar from './components/VillaSpecsBar';
 import AmenitiesSection from './components/AmenitiesSection';
 import RoomsSection from './components/RoomsSection';
+import GoogleReviewsSection from './components/GoogleReviewsSection';
 import GallerySection from './components/GallerySection';
 import GoogleMapsSection from './components/GoogleMapsSection';
 import ContactFooter from './components/ContactFooter';
@@ -55,7 +56,10 @@ export default function App() {
         {/* 5. Restaurant Rooms Showcase (Sala da Pipa & Sala da Oliveira) */}
         <RoomsSection onOpenBooking={handleOpenBooking} theme={theme} currentLang={currentLang} />
 
-        {/* 6. Photo Gallery & Lightbox */}
+        {/* 6. Authentic Google Reviews & Rating Card (4.4★, 44 Reviews) */}
+        <GoogleReviewsSection onOpenBooking={handleOpenBooking} theme={theme} currentLang={currentLang} />
+
+        {/* 7. Photo Gallery & Lightbox */}
         <GallerySection onOpenBooking={handleOpenBooking} theme={theme} currentLang={currentLang} />
 
         {/* 7. Embedded Google Maps (Replaces Attractions Grid as requested) */}
