@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/types": "^8.0.4",
     "@tailwindcss/vite": "^4.0.9",
+    "caniuse-lite": "^1.0.30001810",
     "lucide-react": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

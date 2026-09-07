@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, ChevronDown, Sparkles } from 'lucide-react';
+import { Calendar, ChevronDown } from 'lucide-react';
 import { QUINTA_INFO } from '../data/quintaData';
 
 export default function Hero({ onOpenBooking, theme, currentLang }) {
@@ -38,30 +38,7 @@ export default function Hero({ onOpenBooking, theme, currentLang }) {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 lg:space-y-8 my-auto">
         
-        {/* Top Location & Google Rating Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 -mt-[70px] sm:mt-0">
-          <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase shadow-md ${
-            isDark 
-              ? 'bg-[#353233]/80 border-[#ac926f]/50 text-[#e7d49d] backdrop-blur-md' 
-              : 'bg-white/95 border-[#ac926f]/40 text-[#ac926f]'
-          }`}>
-            <Sparkles className="w-3.5 h-3.5 text-[#ac926f]" />
-            <span>Guia • Pombal • Leiria</span>
-          </div>
 
-          <a 
-            href="#avaliacoes"
-            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-medium tracking-wide shadow-md transition-all hover:scale-105 ${
-              isDark 
-                ? 'bg-[#353233]/80 border-[#ac926f]/40 text-stone-200 hover:border-[#e7d49d] backdrop-blur-md' 
-                : 'bg-white/95 border-stone-300 text-stone-700 hover:border-[#ac926f]'
-            }`}
-          >
-            <span className="text-[#e7d49d] font-bold">★ 4.4</span>
-            <span className="text-[11px] opacity-80">(44 opiniões Google)</span>
-            <span className="text-[11px] text-[#ac926f] font-semibold">• 15-35€</span>
-          </a>
-        </div>
 
         {/* Main Headline - Increased Font Size */}
         <div className="space-y-3">
