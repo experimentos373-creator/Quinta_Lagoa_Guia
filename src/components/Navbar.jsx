@@ -31,20 +31,14 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
   const navLinks = currentLang === 'PT' ? [
     { label: "Início", href: "#hero" },
     { label: "A Quinta", href: "#overview" },
-    { label: "Espaços", href: "#comodidades" },
     { label: "Restaurante", href: "#quartos" },
     { label: "Avaliações", href: "#avaliacoes" },
-    { label: "Galeria", href: "#galeria" },
-    { label: "Localização", href: "#localizacao" },
     { label: "Contactos", href: "#contactos" }
   ] : [
     { label: "Home", href: "#hero" },
     { label: "The Estate", href: "#overview" },
-    { label: "Spaces", href: "#comodidades" },
     { label: "Dining", href: "#quartos" },
     { label: "Reviews", href: "#avaliacoes" },
-    { label: "Gallery", href: "#galeria" },
-    { label: "Location", href: "#localizacao" },
     { label: "Contacts", href: "#contactos" }
   ];
 
@@ -75,13 +69,13 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
             </div>
           </a>
 
-          {/* Nav Links - Optimized spacing to prevent any overlap */}
-          <nav className="hidden xl:flex items-center justify-center gap-3 2xl:gap-4 shrink min-w-0 px-2">
+          {/* Nav Links - Exactly 5 core links */}
+          <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 2xl:gap-8 shrink min-w-0 px-2">
             {navLinks.map((link, idx) => (
               <a
                 key={idx}
                 href={link.href}
-                className="whitespace-nowrap text-[11px] 2xl:text-xs uppercase tracking-wider font-semibold text-white/90 hover:text-[#e7d49d] transition-colors relative py-1 group"
+                className="whitespace-nowrap text-xs xl:text-[13px] uppercase tracking-wider font-semibold text-white/90 hover:text-[#e7d49d] transition-colors relative py-1 group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e7d49d] transition-all duration-300 group-hover:w-full"></span>
@@ -139,10 +133,10 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
               <span>{currentLang === 'PT' ? 'Simular Reserva' : 'Book Villa'}</span>
             </button>
 
-            {/* Mobile / Tablet Drawer Toggle Button (Visible < 2xl) */}
+            {/* Mobile / Tablet Drawer Toggle Button (Visible < lg) */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="2xl:hidden p-2.5 rounded-xl focus:outline-none border border-white/15 bg-[#2b2829] text-white hover:bg-white/10 cursor-pointer min-h-[40px] min-w-[40px] flex items-center justify-center"
+              className="lg:hidden p-2.5 rounded-xl focus:outline-none border border-white/15 bg-[#2b2829] text-white hover:bg-white/10 cursor-pointer min-h-[40px] min-w-[40px] flex items-center justify-center"
               aria-label="Abrir Menu de Navegação"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -155,7 +149,7 @@ export default function Navbar({ onOpenBooking, theme, setTheme, currentLang, se
 
       {/* Mobile & Tablet Full Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="2xl:hidden fixed inset-x-0 top-[60px] sm:top-[68px] bottom-0 bg-[#2b2829]/95 backdrop-blur-xl text-white px-6 pt-6 pb-12 space-y-6 shadow-2xl overflow-y-auto animate-in slide-in-from-top-2 duration-300 z-50">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] sm:top-[68px] bottom-0 bg-[#2b2829]/95 backdrop-blur-xl text-white px-6 pt-6 pb-12 space-y-6 shadow-2xl overflow-y-auto animate-in slide-in-from-top-2 duration-300 z-50">
           
           <div className="grid grid-cols-1 gap-1 border-b border-white/10 pb-4">
             {navLinks.map((link, idx) => (

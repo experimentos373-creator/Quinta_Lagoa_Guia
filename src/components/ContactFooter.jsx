@@ -195,7 +195,7 @@ export default function ContactFooter({ theme, currentLang }) {
         <div className="pt-6 sm:pt-8 border-t border-stone-500/20 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-xs text-stone-400">
           <div className="space-y-1 text-center md:text-left">
             <p>© 2025 - 2026 Quinta Lagoa da Guia • Todos os direitos reservados.</p>
-            <p className="text-[10px] text-stone-500">Avenida Nossa Senhora da Guia 213, Guia, Pombal • Leiria, Portugal</p>
+            <p className="text-[10px] text-stone-500">{QUINTA_INFO.localizacao.morada}, Guia, Pombal • Leiria, Portugal</p>
           </div>
 
           {/* Official Livro de Reclamações Online Badge & Link */}
