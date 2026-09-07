@@ -54,15 +54,6 @@ export const QUINTA_INFO = {
     ],
     reviews: [
       {
-        id: "rev-1",
-        nome: "Joana Lopes",
-        rating: 5,
-        tempo: "há 7 meses",
-        comentario: "Uma agradável surpresa! Adorei toda a experiência neste restaurante, do início ao fim 🤌🏻",
-        destaque: "Experiência gastronómica 5 estrelas do início ao fim",
-        avatarBg: "bg-amber-800"
-      },
-      {
         id: "rev-2",
         nome: "Dominique Lage",
         rating: 5,
